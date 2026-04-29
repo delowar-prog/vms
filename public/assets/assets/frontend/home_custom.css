@@ -1,0 +1,34 @@
+.services-1-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.services-1-heading h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services-1-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+ 
+/* Tablet */
+@media (max-width: 992px) {
+    .slider-img {
+        height: 70vh;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .slider-img {
+        height: 50vh;
+    }
+}
