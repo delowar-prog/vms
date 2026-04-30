@@ -583,7 +583,7 @@
 
                             <div class="signup-dropdown">
                                 <a href="{{ url('/driver_sign_up') }}">Driver</a>
-                                <a href="{{ url('/user_sign_up') }}">User</a>
+                                <a href="{{ url('/sign_up') }}">User</a>
                             </div>
                         </div>
 

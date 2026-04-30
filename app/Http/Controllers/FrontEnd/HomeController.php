@@ -132,10 +132,6 @@ class HomeController extends Controller {
 
 
 	public function get_free_vehicle(Request $request) {
-
-
-
-
 		if($request->status == "book_later")
 		{
 			$date=date('Y-m-d', strtotime($request->date)).' '.$request->time;
@@ -181,8 +177,6 @@ class HomeController extends Controller {
 		if (!Auth::user() || Auth::user()->group_id == null || Auth::user()->user_type == "S") {
 				// $q = "select id from vehicles where in_service=1 and deleted_at is null  and  id not in(select vehicle_id from bookings where  deleted_at is null  and ((dropoff between '" . $from_date . "' and '" . $to_date . "' or pickup between '" . $from_date . "' and '" . $to_date . "') or (DATE_ADD(dropoff, INTERVAL 10 MINUTE)>='" . $from_date . "' and DATE_SUB(pickup, INTERVAL 10 MINUTE)<='" . $to_date . "')))";
 				
-			
-				
 				$q = "SELECT id
 				FROM vehicles
 				WHERE in_service = 1" . $condition . "
@@ -201,9 +195,6 @@ class HomeController extends Controller {
 			} else {
 				// $q = "select id from vehicles where in_service=1 and deleted_at is null and group_id=" . Auth::user()->group_id . " and  id not in(select vehicle_id from bookings where  deleted_at is null  and ((dropoff between '" . $from_date . "' and '" . $to_date . "' or pickup between '" . $from_date . "' and '" . $to_date . "') or (DATE_ADD(dropoff, INTERVAL 10 MINUTE)>='" . $from_date . "' and DATE_SUB(pickup, INTERVAL 10 MINUTE)<='" . $to_date . "')))";
 	
-				
-
-
 				$q = "SELECT id
 				FROM vehicles
 				WHERE in_service = 1" . $condition . "

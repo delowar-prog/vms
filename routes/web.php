@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FrontEnd\RideController;
+
 Route::group(['middleware' => ['IsInstalled', 'lang_check_user', 'front_enable']], function () {
 
 
@@ -32,6 +34,7 @@ Route::group(['middleware' => ['IsInstalled', 'lang_check_user', 'front_enable']
     Route::get('get-vehicle','FrontEnd\BookingController@get_vehicle')->middleware('auth_user');
    
     Route::get('/', 'FrontEnd\HomeController@index')->name('frontend.home');
+    Route::post('/search', [RideController::class, 'search'])->name('search.vehicles');
     // Route::get('edit_profile', 'FrontEnd\HomeController@edit_profile')->middleware('auth_user')->name('frontend.edit_profile');
     Route::post('edit_profile', 'FrontEnd\HomeController@edit_profile_post')->middleware('auth_user');
     Route::get('contact', 'FrontEnd\HomeController@contact')->name('frontend.contact');
