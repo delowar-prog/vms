@@ -15,15 +15,18 @@
                 position: relative;
                 width: 100%;
                 height: auto;
-                background-image: url('assets/assets/images/header-back.png');
+                /* background-image: url('assets/assets/images/header-back.png'); */
                 background-repeat: no-repeat;
                 background-position: right 0px;
 
             }
     .vehicle-card {
         background: #f8f9fa;
+        width: 90%;
+        margin:0 auto;
+        border:2px solid yellowgreen;
         border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(163, 163, 160, 0.5);
     }
 
     .vehicle-card h1 {
